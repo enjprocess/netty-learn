@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package com.shengsiyuan.netty.p6;
+
+option optimize_for = SPEED; //优化压缩速度
+option java_package = "com.shengsiyuan.netty.p6"; //生成文件的包名
+option java_outer_classname = "Student"; //生成文件的类名
+
+message Person {
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+
+
