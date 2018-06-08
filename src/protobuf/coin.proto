@@ -1,0 +1,44 @@
+syntax = "proto2";
+
+package com.shengsiyuan.netty.p7;
+
+option optimize_for=SPEED;
+option java_package = "com.shengsiyuan.netty.p7";
+option java_outer_classname = "Center";
+
+message Person {
+    enum DataType {
+        DOG = 1;
+        CAT = 2;
+        MOUSE = 3;
+    }
+
+    optional DataType dataType = 1;
+    oneof data {
+        Dog dog = 2;
+        Cat cat = 3;
+        Mouse mouse = 4;
+    }
+}
+
+message Dog {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Cat {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
+
+message Mouse {
+
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
+
